@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RideShareU</string>
+    <string name="action_settings">Settings</string>
+    <string name="riding">Riding</string>
+    <string name="driving">Driving</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="signUp">Sign Up</string>
+    <string name="firstName">First Name:</string>
+    <string name="lastName">Last Name:</string>
+    <string name="collegeEmail">College Email:</string>
+    <string name="password">Password:</string>
+    <string name="title_activity_driver_form">DriverForm</string>
+    <string name="driverHeader">Driving</string>
+    <string name="from">From:</string>
+    <string name="destination">To:</string>
+    <string name="roundTrip">Round Trip?</string>
+    <string name="date">Departure:</string>
+</resources>
