@@ -70,6 +70,29 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3" />
         </LinearLayout>
+
+        <!--Start of amount of seats-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/totalSeats"
+                android:textSize="@dimen/textSize" />
+
+            <EditText
+                android:id="@+id/totalSeats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </LinearLayout>
+
         <!-- Start of Departure row -->
         <LinearLayout
             android:layout_width="fill_parent"
@@ -160,6 +183,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:onClick="datePickerDialog" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:layout_gravity="bottom">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/listTrip"
+                android:onClick="tripCreation"/>
         </LinearLayout>
     </LinearLayout>
     <!-- End of form -->

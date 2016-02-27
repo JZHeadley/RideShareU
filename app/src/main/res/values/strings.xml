@@ -18,4 +18,12 @@
     <string name="timeSelect">Time:</string>
 
     <string name="returnDate">Return:</string>
+    <string name="money">Max. Cost</string>
+    <string name="search">Search For Rides</string>
+    <string name="seats">Seats</string>
+    <string name="open">Open</string>
+    <string name="taken">taken</string>
+    <string name="driver">Driver</string>
+    <string name="listTrip">List Trip</string>
+    <string name="totalSeats">Total seats</string>
 </resources>

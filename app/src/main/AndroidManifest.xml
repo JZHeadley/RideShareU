@@ -36,6 +36,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.jzheadley.rideshareu.MainActivity" />
         </activity>
+        <activity android:name=".rideSearch" />
+        <activity android:name=".carSeats"></activity>
     </application>
 
 </manifest>
