@@ -30,7 +30,7 @@ public class DriverForm extends AppCompatActivity {
                 if (checkBox.isChecked()) {
                     ((LinearLayout) findViewById(R.id.returnTripRow)).setVisibility(View.VISIBLE);
                 } else {
-                    ((LinearLayout) findViewById(R.id.returnTripRow)).setVisibility(View.INVISIBLE);
+                    ((LinearLayout) findViewById(R.id.returnTripRow)).setVisibility(View.GONE);
                 }
                 roundTrip = checkBox.isChecked();
             }
