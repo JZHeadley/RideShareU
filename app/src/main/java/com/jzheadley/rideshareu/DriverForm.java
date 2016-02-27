@@ -51,7 +51,11 @@ public class DriverForm extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year,
                                   int monthOfYear, int dayOfMonth) {
-                ((EditText) findViewById(R.id.date_et)).setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                EditText editText = ((EditText) findViewById(R.id.date_et));
+                if (editText.getText().length() != 0) {
+                    editText = ((EditText) findViewById(R.id.returnDate_et));
+                }
+                editText.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
 
             }
         }, mYear, mMonth, mDay);
