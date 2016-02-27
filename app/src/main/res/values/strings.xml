@@ -15,4 +15,7 @@
     <string name="destination">To:</string>
     <string name="roundTrip">Round Trip?</string>
     <string name="date">Departure:</string>
+    <string name="timeSelect">Time:</string>
+
+    <string name="returnDate">Return:</string>
 </resources>
