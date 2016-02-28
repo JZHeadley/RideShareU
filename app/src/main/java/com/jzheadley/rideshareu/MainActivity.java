@@ -42,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void rideList(View veiw) {
-        Log.d("RideShareU", "Ride list selected");
-//        Intent rideListIntent = new Intent(this,RideList.class);
-//        startActivity(rideListIntent);
+    public void rideSearch(View view) {
+        Log.d("RideShareU", "Ride search selected");
+        Intent rideListIntent = new Intent(this,rideSearch.class);
+        startActivity(rideListIntent);
     }
 
     public void tripCreation(View view) {
