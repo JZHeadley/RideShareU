@@ -22,7 +22,7 @@
         android:nestedScrollingEnabled="false"
         android:layout_marginBottom="75dp"
         android:layout_height="wrap_content"
-        android:onClick="rideList"
+        android:onClick="rideSearch"
         android:text="@string/riding"
         android:textSize="20sp" />
 
