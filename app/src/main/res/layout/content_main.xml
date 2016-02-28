@@ -26,6 +26,8 @@
 
     <Button
         android:id="@+id/drivingBtn"
+        android:textColor="@color/textPrimary"
+        android:background="@color/buttoncolor"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="tripCreation"
