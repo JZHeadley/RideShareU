@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
     }
 
     @Override
@@ -54,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(tripCreationIntent);
     }
 
-    public void helpScreen(View view)
+    public void helpScreen(MenuItem item)
     {
         Log.d("RideShareU", "Help screen selected");
-        Intent helpScreenIntent = new Intent(this, helpscreen.class);
+        Intent helpScreenIntent = new Intent(this, newhelpscreen.class);
         startActivity(helpScreenIntent);
     }
 }
