@@ -51,6 +51,7 @@ public class carSeats extends AppCompatActivity implements OnClickListener {
     public carSeats(int myLovelyVariable) {
         this.myVariable = myLovelyVariable;
     }
+    public carSeats(){}
 
     @Override
     public void onClick(View v)
