@@ -62,7 +62,7 @@
                     android:id="@+id/seat_2nd_row1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="rideList"
+                    android:onClick="onClick"
                     android:text="@string/open" />
             </LinearLayout>
 
@@ -78,7 +78,7 @@
                     android:id="@+id/seat_3rd_row1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="rideList"
+                    android:onClick="onClick"
                     android:text="@string/open" />
             </LinearLayout>
         </LinearLayout>
@@ -100,7 +100,7 @@
                     android:visibility="invisible"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="rideList"
+                    android:clickable="false"
                     android:text="@string/open" />
             </LinearLayout>
 
@@ -116,7 +116,7 @@
                     android:id="@+id/seat_2nd_row2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="rideList"
+                    android:onClick="onClick"
                     android:text="@string/open" />
             </LinearLayout>
 
@@ -132,7 +132,7 @@
                     android:id="@+id/seat_3rd_row2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="rideList"
+                    android:onClick="onClick"
                     android:text="@string/open" />
             </LinearLayout>
         </LinearLayout>
@@ -154,7 +154,7 @@
                     android:id="@+id/seat_passenger"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="rideList"
+                    android:onClick="onClick"
                     android:text="@string/open" />
             </LinearLayout>
 
@@ -169,7 +169,7 @@
                     android:id="@+id/seat_2nd_row3"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="rideList"
+                    android:onClick="onClick"
                     android:text="@string/open" />
             </LinearLayout>
 
@@ -185,7 +185,7 @@
                     android:id="@+id/seat_3rd_row3"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:onClick="rideList"
+                    android:onClick="onClick"
                     android:text="@string/open" />
             </LinearLayout>
         </LinearLayout>
