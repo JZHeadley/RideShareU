@@ -40,6 +40,9 @@ public class carSeats extends AppCompatActivity {
             findViewById(R.id.seat_3rd_row2).setVisibility(View.VISIBLE);
             findViewById(R.id.seat_3rd_row3).setVisibility(View.VISIBLE);
         }
+        //else if (seats == 2){
+        //    findViewById(R.id.seat_)
+        //}
         else
             Toast.makeText(getApplicationContext(), "Get a less shitty car", Toast.LENGTH_LONG).show();
     }
