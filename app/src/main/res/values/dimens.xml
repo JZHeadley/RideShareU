@@ -4,4 +4,8 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="textSize">20sp</dimen>
+    <dimen name="screenzerologinvalue">155dp</dimen>
+    <dimen name="screenzerosignupvalue">47dp</dimen>
+    <dimen name="bottomupfixer">4dp</dimen>
+    <dimen name="keepaway">94dp</dimen>
 </resources>

@@ -114,7 +114,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:allowUndo="true"
+                android:hint="@string/timeSelect"
                 android:onClick="timeSelectionDialog" />
 
 
@@ -123,6 +123,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
+                android:hint="@string/Date"
                 android:onClick="datePickerDialog" />
         </LinearLayout>
 
@@ -173,28 +174,29 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:onClick="timeSelectionDialog" />
-
+                android:hint="@string/timeSelect"
+                android:onClick="timeSelectionDialog2" />
 
             <EditText
                 android:id="@+id/returnDate_et"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:onClick="datePickerDialog" />
+                android:hint="@string/Date"
+                android:onClick="datePickerDialog2" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:paddingTop="30dp">
-
+            android:paddingTop="@dimen/bottomupfixer">
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:onClick="tripCreation"
                 android:text="@string/listTrip" />
+
         </LinearLayout>
     </LinearLayout>
     <!-- End of form -->

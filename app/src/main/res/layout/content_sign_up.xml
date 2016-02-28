@@ -90,6 +90,7 @@
                 android:id="@+id/collegeEmail_et"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:hint="@string/eduhint"
                 android:layout_weight="3" />
         </LinearLayout>
         <!-- Start of Password row -->
@@ -106,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="@string/password"
-                android:textSize="@dimen/textSize" />
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/password_et"

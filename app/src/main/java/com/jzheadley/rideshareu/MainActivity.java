@@ -17,9 +17,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
-    //                                             http://191.237.45.19/index.php?U0VMRUNUICogRlJPTSBTZWF0Ow==
-    private static final String QUERY_URL = "http://191.237.45.19/index.php?query=";
-    String qstr = ("SELECT * FROM `Seat';");
+    JSONAdapter mJSONAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,55 +26,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//      System.out.println(Base64.encodeToString(("SELECT * FROM Seat;").getBytes()));
-    }
-
-    private void queryBooks(String searchString) {
-
-        // Prepare your search string to be put in a URL
-        // It might have reserved characters or something
-        String urlString = "";
-        urlString = Base64.encodeToString(qstr.getBytes(), Base64.URL_SAFE);
-
-        // Create a client to perform networking
-        AsyncHttpClient client = new AsyncHttpClient();
-
-        // Have the client get a JSONArray of data
-        // and define how to respond
-        client.get(QUERY_URL + urlString,
-                new JsonHttpResponseHandler() {
-
-                    @Override
-                    public void onSuccess(JSONObject jsonObject) {
-                        try {
-                            new JSONObject(jsonObject.toString()).toString(2);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                    }
-
-                    @Override
-                    public void onFailure(int statusCode, Throwable throwable, JSONObject error) {
-                    }
-                });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        // getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -83,17 +45,50 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void rideList(View veiw) {
-        Log.d("RideShareU", "Ride list selected");
-//        Intent rideListIntent = new Intent(this,RideList.class);
-//        startActivity(rideListIntent);
+    public void rideSearch(View view) {
+        Log.d("RideShareU", "Ride search selected");
+        Intent rideListIntent = new Intent(this, rideSearch.class);
+        startActivity(rideListIntent);
     }
 
     public void tripCreation(View view) {
-        queryBooks(qstr);
-
         Log.d("RideShareU", "Trip creation selected");
         Intent tripCreationIntent = new Intent(this, DriverForm.class);
         startActivity(tripCreationIntent);
+    }
+
+    public void helpScreen(MenuItem item) {
+        Log.d("RideShareU", "Help screen selected");
+        Intent helpScreenIntent = new Intent(this, newhelpscreen.class);
+        startActivity(helpScreenIntent);
+    }
+
+    public String QUERY_URL = "http://jzheadley.com/index.php?query=";
+
+    public void queryDataBase(String queryString) {
+        // Prepare your search string to be put in a URL It might have reserved characters or something
+        String urlString = Base64.encodeToString(queryString.getBytes(), Base64.DEFAULT).trim();
+        Log.d("FUCKUP", "'" + urlString + "'");
+
+        // Create a client to perform networking
+        AsyncHttpClient client = new AsyncHttpClient();
+
+        // Have the client get a JSONAdapter of data and define how to respond
+        client.get((QUERY_URL + urlString), new JsonHttpResponseHandler() {
+
+            @Override
+            public void onSuccess(JSONObject jsonObject) {
+                try {
+                    Log.d("ITWORKED", new JSONObject(jsonObject.toString()).toString());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Throwable throwable, JSONObject error) {
+                Log.wtf("fuckup", "seriously?");
+            }
+        });
     }
 }

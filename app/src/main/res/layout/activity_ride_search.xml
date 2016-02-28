@@ -78,9 +78,12 @@
                 android:layout_weight="1"
                 />
             <EditText
+                android:id="@+id/searchDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="9"
+                android:hint="@string/Date"
+                android:onClick="datePickerDialog"
                 />
         </LinearLayout>
 

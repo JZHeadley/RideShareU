@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">RideShareU</string>
     <string name="action_settings">Settings</string>
-    <string name="riding">Riding</string>
-    <string name="driving">Driving</string>
-    <string name="title_activity_sign_up">SignUp</string>
-    <string name="signUp">Sign Up</string>
+    <string name="riding">Riding?</string>
+    <string name="driving">Driving?</string>
+    <string name="title_activity_sign_up">Sign Up</string>
+    <string name="title_activity_log_in">Log In</string>
     <string name="firstName">First Name:</string>
     <string name="lastName">Last Name:</string>
     <string name="collegeEmail">College Email:</string>
@@ -16,7 +16,7 @@
     <string name="roundTrip">Round Trip?</string>
     <string name="date">Departure:</string>
     <string name="timeSelect">Time:</string>
-
+    <string name="HelpButton">Need Help? Click Here!</string>
     <string name="returnDate">Return:</string>
     <string name="money">Max Cost</string>
     <string name="search">Search For Rides</string>
@@ -26,4 +26,14 @@
     <string name="driver">Driver</string>
     <string name="listTrip">List Trip</string>
     <string name="totalSeats">Total seats</string>
+    <string name="eduhint">must use a .edu address</string>
+    <string name="shorthelp">Help?</string>
+    <string name="title_activity_screenzero">screenzero</string>
+    <string name="contactnumber">(804)9298697</string>
+    <string name="contactdisclaimer">Welcome to RideShareU, the travelling students\' best friend! Comments? Trouble with the app? We would love to hear it all! Please email: </string>
+    <string name="contact_suggestion">Or call our 24/7 help line:</string>
+    <string name="title_activity_newhelpscreen">newhelpscreen</string>
+    <string name="contact_email">john.s.atwood@gmail.com</string>
+    <string name="signUp">Sign Up</string>
+    <string name="Date">Date</string>
 </resources>

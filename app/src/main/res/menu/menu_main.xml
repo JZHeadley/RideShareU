@@ -5,7 +5,9 @@
 
 <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:orderInCategory="101"
+        android:title="@string/HelpButton"
+        android:titleCondensed="@string/shorthelp"
+        android:onClick="helpScreen"
+        app:showAsAction="ifRoom" />
 </menu>

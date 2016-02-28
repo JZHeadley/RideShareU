@@ -52,9 +52,6 @@ public class DriverForm extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year,
                                   int monthOfYear, int dayOfMonth) {
                 EditText editText = ((EditText) findViewById(R.id.date_et));
-                if (editText.getText().length() != 0) {
-                    editText = ((EditText) findViewById(R.id.returnDate_et));
-                }
                 editText.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
 
             }
@@ -62,9 +59,30 @@ public class DriverForm extends AppCompatActivity {
         dpd.show();
     }
 
+    public void datePickerDialog2(View view) {
+        final Calendar c = Calendar.getInstance();
+        int mYear = c.get(Calendar.YEAR);
+        int mMonth = c.get(Calendar.MONTH);
+        int mDay = c.get(Calendar.DAY_OF_MONTH);
+        DatePickerDialog dpd = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year,
+                                  int monthOfYear, int dayOfMonth) {
+                EditText editText = ((EditText) findViewById(R.id.returnDate_et));
+                editText.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+            }
+        }, mYear, mMonth, mDay);
+        dpd.show();
+    }
 
-    public void tripCreation(View view) throws InstantiationException, IllegalAccessException {
+    public void timeSelectionDialog2(View view) {
+        DialogFragment newFragment = new TimePickerFragment2();
+        newFragment.show(getSupportFragmentManager(), "timePicker");
+    }
 
+
+    public void tripCreation(View view) {
+/*
         Log.d("RideShareU", ((EditText) findViewById(R.id.date_et)).getText().toString());
         Log.d("RideShareU", ((EditText) findViewById(R.id.returnDate_et)).getText().toString());
         Log.d("RideShareU", ((EditText) findViewById(R.id.time_et)).getText().toString());
@@ -81,6 +99,6 @@ public class DriverForm extends AppCompatActivity {
                 findViewById(R.id.from_et).toString(), // Source of travel
                 findViewById(R.id.destination_et).toString() // Destination of travel
         );
-
+*/
     }
 }
