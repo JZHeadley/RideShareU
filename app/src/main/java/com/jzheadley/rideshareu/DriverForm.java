@@ -64,7 +64,7 @@ public class DriverForm extends AppCompatActivity {
 
 
     public void tripCreation(View view) throws InstantiationException, IllegalAccessException {
-
+/*
         Log.d("RideShareU", ((EditText) findViewById(R.id.date_et)).getText().toString());
         Log.d("RideShareU", ((EditText) findViewById(R.id.returnDate_et)).getText().toString());
         Log.d("RideShareU", ((EditText) findViewById(R.id.time_et)).getText().toString());
@@ -81,6 +81,6 @@ public class DriverForm extends AppCompatActivity {
                 findViewById(R.id.from_et).toString(), // Source of travel
                 findViewById(R.id.destination_et).toString() // Destination of travel
         );
-
+*/
     }
 }

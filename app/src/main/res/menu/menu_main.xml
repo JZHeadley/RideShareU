@@ -7,5 +7,6 @@
         android:orderInCategory="101"
         android:title="@string/HelpButton"
         android:titleCondensed="@string/shorthelp"
+        android:onClick="helpScreen"
         app:showAsAction="ifRoom" />
 </menu>
