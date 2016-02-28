@@ -52,14 +52,32 @@ public class DriverForm extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year,
                                   int monthOfYear, int dayOfMonth) {
                 EditText editText = ((EditText) findViewById(R.id.date_et));
-                if (editText.getText().length() != 0) {
-                    editText = ((EditText) findViewById(R.id.returnDate_et));
-                }
                 editText.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
 
             }
         }, mYear, mMonth, mDay);
         dpd.show();
+    }
+
+    public void datePickerDialog2(View view) {
+        final Calendar c = Calendar.getInstance();
+        int mYear = c.get(Calendar.YEAR);
+        int mMonth = c.get(Calendar.MONTH);
+        int mDay = c.get(Calendar.DAY_OF_MONTH);
+        DatePickerDialog dpd = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year,
+                                  int monthOfYear, int dayOfMonth) {
+                EditText editText = ((EditText) findViewById(R.id.returnDate_et));
+                editText.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+            }
+        }, mYear, mMonth, mDay);
+        dpd.show();
+    }
+
+    public void timeSelectionDialog2(View view) {
+        DialogFragment newFragment = new TimePickerFragment2();
+        newFragment.show(getSupportFragmentManager(), "timePicker");
     }
 
 
