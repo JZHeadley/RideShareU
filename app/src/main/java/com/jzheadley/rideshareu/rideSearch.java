@@ -32,12 +32,8 @@ public class rideSearch extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year,
                                   int monthOfYear, int dayOfMonth) {
-                EditText editText = ((EditText) findViewById(R.id.date_et));
-                if (editText.getText().length() != 0) {
-                    editText = ((EditText) findViewById(R.id.returnDate_et));
-                }
+                EditText editText = ((EditText) findViewById(R.id.searchDate));
                 editText.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-
             }
         }, mYear, mMonth, mDay);
         dpd.show();
