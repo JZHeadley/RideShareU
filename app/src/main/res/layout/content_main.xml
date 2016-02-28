@@ -16,13 +16,16 @@
 
     <Button
         android:id="@+id/ridingBtn"
+        android:textColor="@color/textPrimary"
+        android:background="@color/buttoncolor"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="75dp"
         android:nestedScrollingEnabled="false"
+        android:layout_marginBottom="75dp"
+        android:layout_height="wrap_content"
         android:onClick="rideList"
         android:text="@string/riding"
         android:textSize="20sp" />
+
 
     <Button
         android:id="@+id/drivingBtn"
