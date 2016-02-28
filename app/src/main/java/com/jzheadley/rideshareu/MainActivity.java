@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     public void helpScreen(View view)
     {
         Log.d("RideShareU", "Help screen selected");
-        //Intent helpScreenIntent = new Intent(this, helpscreen.class);
-        //startActivity(helpScreenIntent);
+        Intent helpScreenIntent = new Intent(this, helpscreen.class);
+        startActivity(helpScreenIntent);
     }
 }
