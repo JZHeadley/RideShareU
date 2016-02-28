@@ -76,7 +76,7 @@ public class DriverForm extends AppCompatActivity {
     }
 
     public void timeSelectionDialog2(View view) {
-        DialogFragment newFragment = new TimePickerFragment();
+        DialogFragment newFragment = new TimePickerFragment2();
         newFragment.show(getSupportFragmentManager(), "timePicker");
     }
 
