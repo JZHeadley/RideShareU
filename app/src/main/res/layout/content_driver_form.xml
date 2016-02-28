@@ -70,7 +70,30 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3" />
         </LinearLayout>
-        <!-- Start of Date row -->
+
+        <!--Start of amount of seats-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/totalSeats"
+                android:textSize="@dimen/textSize" />
+
+            <EditText
+                android:id="@+id/totalSeats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <!-- Start of Departure row -->
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -82,24 +105,27 @@
                 android:id="@+id/date_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
+                android:layout_weight="4"
                 android:text="@string/date"
                 android:textSize="@dimen/textSize" />
-
-            <EditText
-                android:id="@+id/date_et"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:inputType="date" />
 
             <EditText
                 android:id="@+id/time_et"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:inputType="time" />
+                android:allowUndo="true"
+                android:onClick="timeSelectionDialog" />
+
+
+            <EditText
+                android:id="@+id/date_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:onClick="datePickerDialog" />
         </LinearLayout>
+
         <!-- Start of RoundTrip row -->
         <LinearLayout
             android:layout_width="fill_parent"
@@ -116,14 +142,60 @@
                 android:text="@string/roundTrip"
                 android:textSize="@dimen/textSize" />
 
-            <RadioButton
-                android:id="@+id/roundTrip_rbtn"
+            <CheckBox
+                android:id="@+id/roundTrip_chk"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="3" />
+                android:layout_weight="2"
+                android:clickable="true" />
         </LinearLayout>
 
+        <!-- Start of Date row -->
+        <LinearLayout
+            android:id="@+id/returnTripRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:visibility="invisible">
 
+            <TextView
+                android:id="@+id/returnDate_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/returnDate"
+                android:textSize="@dimen/textSize" />
+
+            <EditText
+                android:id="@+id/returnTime_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:onClick="timeSelectionDialog" />
+
+
+            <EditText
+                android:id="@+id/returnDate_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:onClick="datePickerDialog" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingTop="30dp">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="tripCreation"
+                android:text="@string/listTrip" />
+        </LinearLayout>
     </LinearLayout>
     <!-- End of form -->
 </LinearLayout>
