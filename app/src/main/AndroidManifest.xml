@@ -2,11 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jzheadley.rideshareu">
 
-
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="23" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -42,7 +47,16 @@
                 android:value="com.jzheadley.rideshareu.MainActivity" />
         </activity>
         <activity android:name=".rideSearch" />
-        <activity android:name=".carSeats"></activity>
+        <activity android:name=".carSeats" />
+        <activity android:name=".helpscreen" />
+        <activity
+            android:name=".screenzero"
+            android:label="@string/title_activity_screenzero"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".newhelpscreen"
+            android:label="@string/title_activity_newhelpscreen"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
