@@ -176,6 +176,12 @@
                 android:onClick="timeSelectionDialog" />
 
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="tripCreation"
+                android:text="@string/listTrip" />
+
             <EditText
                 android:id="@+id/returnDate_et"
                 android:layout_width="0dp"
@@ -190,11 +196,6 @@
             android:layout_gravity="bottom"
             android:paddingTop="@dimen/bottomupfixer">
 
-            <Button
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:onClick="tripCreation"
-                android:text="@string/listTrip" />
         </LinearLayout>
     </LinearLayout>
     <!-- End of form -->
