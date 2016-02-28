@@ -53,4 +53,11 @@ public class MainActivity extends AppCompatActivity {
         Intent tripCreationIntent = new Intent(this, DriverForm.class);
         startActivity(tripCreationIntent);
     }
+
+    public void helpScreen(View view)
+    {
+        Log.d("RideShareU", "Help screen selected");
+        Intent helpScreenIntent = new Intent(this, helpscreen.class);
+        startActivity(helpScreenIntent);
+    }
 }
