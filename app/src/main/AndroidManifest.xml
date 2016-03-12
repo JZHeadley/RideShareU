@@ -7,7 +7,6 @@
         android:targetSdkVersion="23" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -56,7 +55,16 @@
         <activity
             android:name=".newhelpscreen"
             android:label="@string/title_activity_newhelpscreen"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListRides"
+            android:label="@string/title_activity_list_rides"
+            android:parentActivityName=".rideSearch"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jzheadley.rideshareu.rideSearch" />
+        </activity>
     </application>
 
 </manifest>

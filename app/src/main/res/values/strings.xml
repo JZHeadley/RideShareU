@@ -36,4 +36,9 @@
     <string name="contact_email">john.s.atwood@gmail.com</string>
     <string name="signUp">Sign Up</string>
     <string name="Date">Date</string>
+    <string name="title_activity_list_rides">ListRides</string>
+    <string name="textview">textview</string>
+    <string name="button">1</string>
+    <string name="Search">Search</string>
+    <string name="Money">Price per Seat</string>
 </resources>

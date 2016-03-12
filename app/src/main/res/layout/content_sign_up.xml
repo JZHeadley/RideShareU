@@ -90,8 +90,8 @@
                 android:id="@+id/collegeEmail_et"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/eduhint"
-                android:layout_weight="3" />
+                android:layout_weight="3"
+                android:hint="@string/eduhint" />
         </LinearLayout>
         <!-- Start of Password row -->
         <LinearLayout

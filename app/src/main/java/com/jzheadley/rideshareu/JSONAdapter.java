@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -23,6 +22,7 @@ public class JSONAdapter extends BaseAdapter {
         mContext = context;
         mInflater = inflater;
         this.mJsonArray = new org.json.JSONArray();
+        System.out.println("THIS IS THE JSON " + mJsonArray);
     }
 
     @Override
@@ -54,9 +54,8 @@ public class JSONAdapter extends BaseAdapter {
 
             // create a new "Holder" with subviews
             holder = new ViewHolder();
-            holder.thumbnailImageView = (ImageView) convertView.findViewById(R.id.img_thumbnail);
-            holder.titleTextView = (TextView) convertView.findViewById(R.id.text_title);
-            holder.authorTextView = (TextView) convertView.findViewById(R.id.text_author);
+            holder.fromTextView = (TextView) convertView.findViewById(R.id.from_et);
+            holder.destinationTextView = (TextView) convertView.findViewById(R.id.destination_et);
 
             // hang onto this holder for future recyclage
             convertView.setTag(holder);
@@ -66,31 +65,37 @@ public class JSONAdapter extends BaseAdapter {
             // and just get the holder you already made
             holder = (ViewHolder) convertView.getTag();
         }
-// Get the current book's data in JSON form
+        // Get the current book's data in JSON form
         JSONObject jsonObject = (JSONObject) getItem(position);
+
         // Grab the title and author from the JSON
-        String bookTitle = "";
-        String authorName = "";
-
-        if (jsonObject.has("title")) {
-            bookTitle = jsonObject.optString("title");
+        String source = "";
+        String destination = "";
+        System.out.print(jsonObject.toString() + "        THIS IS THE JSON");
+        if (jsonObject.has("source")) {
+            source = jsonObject.optString("source");
         }
 
-        if (jsonObject.has("author_name")) {
-            authorName = jsonObject.optJSONArray("author_name").optString(0);
+        if (jsonObject.has("destination")) {
+            destination = jsonObject.optJSONArray("destination").optString(0);
         }
 
-// Send these Strings to the TextViews for display
-        holder.titleTextView.setText(bookTitle);
-        holder.authorTextView.setText(authorName);
+        // Send these Strings to the TextViews for display
+        holder.fromTextView.setText(source);
+        holder.destinationTextView.setText(destination);
         return convertView;
+    }
+
+    public void updateData(JSONArray jsonArray) {
+        // update the adapter's dataset
+        mJsonArray = jsonArray;
+        notifyDataSetChanged();
     }
 
     // this is used so you only ever have to do
 // inflation and finding by ID once ever per View
     private static class ViewHolder {
-        public ImageView thumbnailImageView;
-        public TextView titleTextView;
-        public TextView authorTextView;
+        public TextView destinationTextView;
+        public TextView fromTextView;
     }
 }

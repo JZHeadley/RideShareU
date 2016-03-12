@@ -1,16 +1,21 @@
 package com.jzheadley.rideshareu;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Toast;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class carSeats extends AppCompatActivity implements OnClickListener {
     int myVariable;
+
+    public carSeats(int myLovelyVariable) {
+        this.myVariable = myLovelyVariable;
+    }
+
+    public carSeats(){}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,7 @@ public class carSeats extends AppCompatActivity implements OnClickListener {
 
     public void numSeats(int seats)
     {
+        seats = 7;
         if(seats == 5)
         {
             findViewById(R.id.seat_2nd_row2).setVisibility(View.VISIBLE);
@@ -47,11 +53,6 @@ public class carSeats extends AppCompatActivity implements OnClickListener {
         else
             Toast.makeText(getApplicationContext(), "Get a less shitty car", Toast.LENGTH_LONG).show();
     }
-
-    public carSeats(int myLovelyVariable) {
-        this.myVariable = myLovelyVariable;
-    }
-    public carSeats(){}
 
     @Override
     public void onClick(View v)

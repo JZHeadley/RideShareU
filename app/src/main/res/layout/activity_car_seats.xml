@@ -46,9 +46,8 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="rideList"
-                    android:text="@string/driver"
-                    android:clickable="false"/>
+                    android:clickable="false"
+                    android:text="@string/driver" />
             </LinearLayout>
 
             <LinearLayout
@@ -74,12 +73,12 @@
                 android:paddingTop="50dp">
 
                 <Button
-                    android:visibility="invisible"
                     android:id="@+id/seat_3rd_row1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:onClick="onClick"
-                    android:text="@string/open" />
+                    android:text="@string/open"
+                    android:visibility="invisible" />
             </LinearLayout>
         </LinearLayout>
 
@@ -97,11 +96,11 @@
                 android:paddingTop="50dp">
 
                 <Button
-                    android:visibility="invisible"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:clickable="false"
-                    android:text="@string/open" />
+                    android:text="@string/open"
+                    android:visibility="invisible" />
             </LinearLayout>
 
             <LinearLayout
@@ -112,12 +111,12 @@
                 android:paddingTop="50dp">
 
                 <Button
-                    android:visibility="invisible"
                     android:id="@+id/seat_2nd_row2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:onClick="onClick"
-                    android:text="@string/open" />
+                    android:text="@string/open"
+                    android:visibility="invisible" />
             </LinearLayout>
 
             <LinearLayout
@@ -128,12 +127,12 @@
                 android:paddingTop="50dp">
 
                 <Button
-                    android:visibility="invisible"
                     android:id="@+id/seat_3rd_row2"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:onClick="onClick"
-                    android:text="@string/open" />
+                    android:text="@string/open"
+                    android:visibility="invisible" />
             </LinearLayout>
         </LinearLayout>
 
@@ -181,12 +180,12 @@
                 android:paddingTop="50dp">
 
                 <Button
-                    android:visibility="invisible"
                     android:id="@+id/seat_3rd_row3"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:onClick="onClick"
-                    android:text="@string/open" />
+                    android:text="@string/open"
+                    android:visibility="invisible" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

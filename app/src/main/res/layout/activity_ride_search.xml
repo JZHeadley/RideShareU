@@ -13,8 +13,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text = "@string/search"
         android:layout_gravity="center_horizontal"
+        android:text="@string/search"
         android:textSize="20sp"/>
 
     <!--Start of form-->
@@ -27,14 +27,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp">
+            android:paddingBottom="10dp"
+            android:paddingTop="20dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="@string/from"
                 android:layout_weight="2"
+                android:text="@string/from"
+                android:textSize="20dp"
                 />
             <EditText
                 android:layout_width="wrap_content"
@@ -47,15 +47,15 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp">
+            android:paddingBottom="10dp"
+            android:paddingTop="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="@string/destination"
                 android:layout_weight="2"
+                android:text="@string/destination"
+                android:textSize="20dp"
                 />
             <EditText
                 android:layout_width="wrap_content"
@@ -68,14 +68,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp">
+            android:paddingBottom="10dp"
+            android:paddingTop="20dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="@string/date"
                 android:layout_weight="1"
+                android:text="@string/date"
+                android:textSize="20dp"
                 />
             <EditText
                 android:id="@+id/searchDate"
@@ -91,20 +91,20 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp">
+            android:paddingBottom="10dp"
+            android:paddingTop="20dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="@string/money"
                 android:layout_weight="1"
+                android:text="@string/money"
+                android:textSize="20dp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
                 android:text="$"
+                android:textSize="20dp"
                 />
             <EditText
                 android:layout_width="wrap_content"
@@ -117,14 +117,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="100dp"
-            android:paddingBottom="10dp">
+            android:paddingBottom="10dp"
+            android:paddingTop="100dp">
             <Button
                 android:id="@+id/search_for_rides"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/search"
-                android:onClick="rideList"/>
+                android:onClick="rideList"
+                android:text="@string/search" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

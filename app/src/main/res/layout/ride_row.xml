@@ -13,17 +13,19 @@
         android:scaleType="centerInside" />
 
     <TextView
-        android:id="@+id/text_title"
+        android:id="@+id/ride_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/img_thumbnail"
         android:layout_marginLeft="25dp"
-        android:layout_toRightOf="@+id/img_thumbnail" />
+        android:layout_toRightOf="@+id/img_thumbnail"
+        android:text="@string/button" />
 
     <TextView
-        android:id="@+id/text_author"
+        android:id="@+id/driver_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/text_title"
-        android:layout_below="@+id/text_title" />
+        android:layout_alignLeft="@+id/ride_name"
+        android:layout_below="@+id/ride_name"
+        android:text="@string/button" />
 </RelativeLayout>

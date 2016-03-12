@@ -16,25 +16,25 @@
 
     <Button
         android:id="@+id/ridingBtn"
-        android:textColor="@color/textPrimary"
-        android:background="@color/buttoncolor"
         android:layout_width="fill_parent"
-        android:nestedScrollingEnabled="false"
-        android:layout_marginBottom="75dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="75dp"
+        android:background="@color/buttoncolor"
+        android:nestedScrollingEnabled="false"
         android:onClick="rideSearch"
         android:text="@string/riding"
+        android:textColor="@color/textPrimary"
         android:textSize="20sp" />
 
 
     <Button
         android:id="@+id/drivingBtn"
-        android:textColor="@color/textPrimary"
-        android:background="@color/buttoncolor"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="@color/buttoncolor"
         android:onClick="tripCreation"
         android:text="@string/driving"
+        android:textColor="@color/textPrimary"
         android:textSize="20sp" />
 
 

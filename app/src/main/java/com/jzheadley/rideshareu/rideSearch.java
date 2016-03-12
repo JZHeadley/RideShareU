@@ -2,8 +2,8 @@ package com.jzheadley.rideshareu;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -19,8 +19,8 @@ public class rideSearch extends AppCompatActivity {
     }
 
     public void rideList(View view) {
-        //Intent intent = new Intent(this, rideList.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, ListRides.class);
+        startActivity(intent);
     }
 
     public void datePickerDialog(View view) {
